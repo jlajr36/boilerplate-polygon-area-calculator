@@ -14,7 +14,7 @@ class UnitTests(unittest.TestCase):
         actual = shape_calculator.Square is not shape_calculator.Rectangle
         expected = True
         self.assertEqual(actual, expected, 'Expected Square class to be a distinct class from the Rectangle class.')
-
+    
     def test_square_is_square_and_rectangle(self):
         actual = isinstance(self.sq, shape_calculator.Square) and isinstance(self.sq, shape_calculator.Rectangle)
         expected = True
@@ -29,7 +29,7 @@ class UnitTests(unittest.TestCase):
         actual = str(self.sq)
         expected = "Square(side=5)"
         self.assertEqual(actual, expected, 'Expected string representation of square to be "Square(side=5)"')
-    
+
     def test_area(self):
         actual = self.rect.get_area()
         expected = 18
@@ -37,7 +37,7 @@ class UnitTests(unittest.TestCase):
         actual = self.sq.get_area()
         expected = 25
         self.assertEqual(actual, expected, 'Expected area of square to be 25')
-   
+
     def test_perimeter(self):
         actual = self.rect.get_perimeter()
         expected = 18
@@ -68,20 +68,20 @@ class UnitTests(unittest.TestCase):
         actual = str(self.sq)
         expected = "Square(side=4)"
         self.assertEqual(actual, expected, 'Expected string representation of square after setting width to be "Square(side=4)"')
-    '''
+    
     def test_rectangle_picture(self):
         self.rect.set_width(7)
         self.rect.set_height(3)
         actual = self.rect.get_picture()
         expected = "*******\n*******\n*******\n"
         self.assertEqual(actual, expected, 'Expected rectangle picture to be different.')     
-
+    
     def test_squaree_picture(self):
         self.sq.set_side(2)
         actual = self.sq.get_picture()
         expected = "**\n**\n"
         self.assertEqual(actual, expected, 'Expected square picture to be different.')   
-
+    
     def test_big_picture(self):
         self.rect.set_width(51)
         self.rect.set_height(3)
@@ -107,6 +107,6 @@ class UnitTests(unittest.TestCase):
         actual = rect2.get_amount_inside(self.rect)
         expected = 0
         self.assertEqual(actual, expected, 'Expected `get_amount_inside` to return 0.')
-    '''
+
 
 unittest.main()
